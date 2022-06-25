@@ -1,3 +1,5 @@
+const CoinGecko = require("coingecko-api");
+
 const User = require("../models/User");
 const Business = require("../models/Business");
 
@@ -97,3 +99,20 @@ exports.search = async (nameLook, paymentLook) =>
     name: { $regex: new RegExp(nameLook, "i") },
     payment: { $regex: new RegExp(paymentLook, "i") },
   }).lean();
+
+exports.coinsPrice = async () => {
+  const CoinGeckoClient = new CoinGecko();
+
+  let data = await CoinGeckoClient.exchanges.fetchTickers("bitfinex", {
+    coin_ids: ["bitcoin", "ethereum", "dogecoin"],
+  });
+  let _coinList = {};
+  let _datacc = data.data.tickers.filter((t) => t.target == "USD");
+  ["BTC", "ETH", "DOGE"].forEach((i) => {
+    let _temp = _datacc.filter((t) => t.base == i);
+    let _res = _temp.length == 0 ? [] : _temp[0];
+    _coinList[i] = _res.last;
+  });
+
+  return _coinList;
+};
