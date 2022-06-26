@@ -23,6 +23,7 @@ const businessSchema = new mongoose.Schema({
   },
   buyers: [{ type: mongoose.Types.ObjectId, ref: "User" }],
   creator: { type: mongoose.Types.ObjectId, ref: "User" },
+  initialCoin: { type: String },
 });
 
 const Business = mongoose.model("Business", businessSchema);
