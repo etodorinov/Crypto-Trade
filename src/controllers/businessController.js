@@ -44,7 +44,7 @@ router.get("/remove/:id", isNotAuthorized, async (req, res) => {
   } catch (error) {
     const business = await businessService.getOne(req.params.id);
     const isOwner = true;
-    
+
     res.render("details", { business, isOwner, error });
   }
 });
@@ -59,6 +59,30 @@ router.get("/search", isNotAuthorized, async (req, res) => {
   }
 
   res.render("search", { business });
+});
+
+router.get("/softuni", (res, req) => {
+  businessService.softuni();
+
+  // res.render("home"); // not working
+  // res.end(); // not working
+  // res.redirect("/"); // not working
+});
+
+router.get("/exam", (res, req) => {
+  businessService.exam();
+});
+
+router.get("/heroku", (res, req) => {
+  businessService.heroku();
+});
+
+router.get("/mongodb", (res, req) => {
+  businessService.mongodb();
+});
+
+router.get("/github", (res, req) => {
+  businessService.github();
 });
 
 router.post("/create", isNotAuthorized, async (req, res) => {
