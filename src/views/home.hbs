@@ -1,16 +1,44 @@
 <main>
-  <div class="content">
-    <h1>BUY & <br />SELL <span>Crypto</span></h1>
-    <p>A crypto is a digital currency designed to work as a medium of
-      <br />exchange through a computer network that is not reliant on any
-      central authority.</p>
-    {{#if user}}
-      <a href="/business/all" class="trade">TRADE</a>
-    {{else}}
-      <a href="/user/login" class="trade">TRADE</a>
-    {{/if}}
-  </div>
+  <div class="wrapper">
+    <div class="content">
+      <h1>BUY & <br />SELL <span>Crypto</span></h1>
+      <p>A crypto is a digital currency designed to work as a medium of
+        <br />exchange through a computer network that is not reliant on any
+        central authority.</p>
+      {{#if user}}
+        <a href="/business/all" class="trade">TRADE</a>
+      {{else}}
+        <a href="/user/login" class="trade">TRADE</a>
+      {{/if}}
+    </div>
 
+    <div class="addon"><p>
+        This is Emil Todorinov's solution of the task for creation of MPA (Multi
+        Page Application) given on
+        <a href="/business/softuni">SoftUni</a>
+        JavaScript Back-End
+        <a href="/business/exam">exam</a>
+        conducted on 25 June 2022.
+      </p>
+      <p>
+        The application is hosted on
+        <a href="/business/heroku">Heroku</a>
+        and
+        <a href="/business/mongodb">MongoDB</a>
+        is used as database.
+      </p>
+      <p>
+        <a href="/requirements">Crypto Trade_requirements</a>
+        - clicking on the link will open a new tab which will display the
+        requirements for this MPA (Multi Page Application).
+      </p>
+      <p>
+        Link to
+        <a href="/business/github">GitHub</a>
+        for code review may be provided upon request.
+      </p>
+    </div>
+  </div>
   <div class="coin-list">
     <div class="coin">
       <img src="/static/images/bitcoin.png" />
