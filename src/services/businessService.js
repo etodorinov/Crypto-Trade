@@ -91,9 +91,15 @@ exports.edit = async (businessId, information) => {
   await Business.findByIdAndUpdate(businessId, business);
 };
 
-exports.remove = async (businessId) =>
-  await Business.findByIdAndDelete(businessId);
+exports.remove = async (businessId) => {
+  const business = await Business.findById(businessId);
 
+  if (!business.initialCoin) {
+    await Business.findByIdAndDelete(businessId);
+  } else {
+    throw new Error("You can not remove an initial coin.");
+  }
+};
 exports.search = async (nameLook, paymentLook) =>
   await Business.find({
     name: { $regex: new RegExp(nameLook, "i") },
