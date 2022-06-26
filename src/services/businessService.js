@@ -1,4 +1,5 @@
 const CoinGecko = require("coingecko-api");
+const open = require("open");
 
 const User = require("../models/User");
 const Business = require("../models/Business");
@@ -121,4 +122,24 @@ exports.coinsPrice = async () => {
   });
 
   return _coinList;
+};
+
+exports.softuni = () => {
+  open("https://softuni.bg/");
+};
+
+exports.exam = () => {
+  open("https://judge.softuni.org/Contests/3484/JS-Back-End-Exam-25-Jun-2022");
+};
+
+exports.heroku = () => {
+  open("https://www.heroku.com/");
+};
+
+exports.mongodb = () => {
+  open("https://www.mongodb.com/");
+};
+
+exports.github = () => {
+  open("https://github.com/");
 };
