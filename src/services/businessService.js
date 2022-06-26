@@ -1,5 +1,4 @@
 const CoinGecko = require("coingecko-api");
-const open = require("open");
 
 const User = require("../models/User");
 const Business = require("../models/Business");
