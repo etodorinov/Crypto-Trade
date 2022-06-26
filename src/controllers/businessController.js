@@ -37,9 +37,16 @@ router.get("/edit/:id", isNotAuthorized, async (req, res) => {
 });
 
 router.get("/remove/:id", isNotAuthorized, async (req, res) => {
-  await businessService.remove(req.params.id);
+  try {
+    await businessService.remove(req.params.id);
 
-  res.redirect("/business/all");
+    res.redirect("/business/all");
+  } catch (error) {
+    const business = await businessService.getOne(req.params.id);
+    const isOwner = true;
+    
+    res.render("details", { business, isOwner, error });
+  }
 });
 
 router.get("/search", isNotAuthorized, async (req, res) => {
