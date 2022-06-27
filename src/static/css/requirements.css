@@ -1,0 +1,53 @@
+.addon-two {
+  margin-top: 6%;
+  width: auto;
+  margin-left: 72px;
+  overflow: scroll;
+  height: 500px;
+  overflow-x: hidden;
+}
+
+.addon-two h3 {
+  margin-top: 12px;
+  color: #ff960b;
+}
+
+.addon-two h5 {
+  margin-top: 12px;
+  color: #ff960b;
+  margin-left: 30px;
+  font-size: 14px;
+}
+
+.addon-two ol {
+  margin-left: 48px;
+  text-align: justify;
+  margin-top: 12px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.addon-two ul {
+  margin-left: 48px;
+  text-align: justify;
+  margin-top: 12px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.addon-two p {
+  margin-left: 30px;
+  text-align: justify;
+  margin-top: 12px;
+  line-height: 22px;
+  font-size: 14px;
+  width: 96%;
+}
+
+.addon-two img {
+  margin-top: 12px;
+  border-color: #ff960b;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+}
