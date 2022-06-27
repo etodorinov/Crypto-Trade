@@ -61,6 +61,10 @@ router.get("/search", isNotAuthorized, async (req, res) => {
   res.render("search", { business });
 });
 
+router.get("/requirements", (req, res) => {
+  res.render("requirements");
+});
+
 router.post("/create", isNotAuthorized, async (req, res) => {
   try {
     await businessService.create(req.body, req.user);
