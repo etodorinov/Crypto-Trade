@@ -92,8 +92,10 @@
         <h5>Home Page (For logged in users and logged-out users)</h5>
         <p>Visualize <span>static home page</span>.</p>
         <img src="../static/images/Picture3.jpg" alt="">
-
-
+        <h5 class="not-initial">* Add on to initial requirements</h5>
+        <p>The prices of the three coins shown on the home page are fetched in the time of the page's loading through <a
+                href="https://www.npmjs.com/package/coingecko-api" target="_blank" class="coingecko">CoinGecko API.</a>
+        </p>
 
         <h5>Register Page (Logged Out User)</h5>
         <p><span>Register</span> a user inside the Database with a <span>username</span>, <span>email</span>, and
@@ -104,6 +106,34 @@
             the <span>Home page</span>.
         </p>
         <img src="../static/images/Picture4.jpg" alt="">
+
+        <h5 class="not-initial">* Add on to initial requirements</h5>
+        <p>There are <span>three default</span> users with which the different functionalities may be
+            <span>tested</span>:
+        </p>
+        <p>
+        <ul>
+            <li><span>username</span>: userOne</li>
+            <li><span>email</span>: abv@abv.bg</li>
+            <li><span>password</span>: 1234</li>
+        </ul>
+        </p>
+        <p>
+        <ul>
+            <li><span>username</span>: userTwo</li>
+            <li><span>email</span>: gbg@gbg.bg</li>
+            <li><span>password</span>: 1234</li>
+        </ul>
+        </p>
+        <p>
+        <ul>
+            <li><span>username</span>: userThree</li>
+            <li><span>email</span>: abv@gbg.bg</li>
+            <li><span>password</span>: 1234</li>
+        </ul>
+        </p>
+
+
 
         <h5>Login Page (Logged Out User) - (5 Pts)</h5>
         <p> Logging an already registered user with the correct <span>email</span> and <span>password</span>. After
@@ -191,11 +221,31 @@
             success, <span>redirect</span> the user to the <span>All Crypto</span> page.</p>
         <img src="../static/images/Picture12.jpg" alt="">
 
+        <h5 class="not-initial">* Add on to initial requirements</h5>
+        <p>There are <span>three initial</span> coins, created by each of the users. These coins are <span>Eagle
+                coin</span> created
+            by userOne
+            (abv@abv.bg), <span>Happy Cat coin</span> created by userTwo (gbg@gbg.bg) and <span>Pepper coin</span>
+            created by userThree (abv@gbg.bg).</p>
+
         <h5>Delete Offer (logged in user and owner of the current offer)</h5>
         <p>Each <span>owner</span> of the crypto offer must be able to click on the [<span>Delete</span>] button and
             <span>delete the current crypto</span>
             from the Database, and the user must be redirected to the <span>All Crypto</span> page.
         </p>
+
+        <h5 class="not-initial">* Add on to initial requirements</h5>
+        <p>The initial coins <span>can not be
+                removed even by their creators</span>,
+            although the
+            delete button is visible and functional, so there are always coins to demostrate the
+            basic functionalities - catalogue, details, edit, buy and search. If an attempt to remove initial coin is
+            done an appropriate message is displayed. If one wants to test the
+            delete functionality one
+            should create his own coin by registering a user or by using any of the default users - userOne
+            (abv@abv.bg), userTwo (gbg@gbg.bg) or userThree (abv@gbg.bg).</p>
+        <img src="../static/images/Picture22.jpg" alt="">
+
 
         <h5>Edit Offer (logged in user and owner of the current offer)</h5>
         <p>Each <span>owner</span> can edit their <span>crypto offer</span>. Clicking the [<span>Edit</span>] button for
