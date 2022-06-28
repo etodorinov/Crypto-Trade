@@ -41,7 +41,7 @@
   margin-top: 12px;
   line-height: 22px;
   font-size: 14px;
-  width: 96%;
+  width: 93%;
 }
 
 .addon-two img {
@@ -59,4 +59,8 @@
 .addon-two .underlined {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.addon-two .not-initial{
+  color: aquamarine;
 }
